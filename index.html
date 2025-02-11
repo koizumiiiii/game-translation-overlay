@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Game Translation Overlay</title>
+	<style>
+		body {
+			margin: 0;
+			background: transparent;
+		}
+		#overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			pointer-events: none;
+		}
+		.translation-box {
+			position: absolute;
+			background: rgba(0, 0, 0, 0.7);
+			color: white;
+			padding: 10px;
+			border-radius: 5px;
+			pointer-events: auto;
+		}
+		.status-indicator {
+			position: fixed;
+			top: 10px;
+			right: 10px;
+			padding: 5px 10px;
+			border-radius: 3px;
+			background: rgba(0, 0, 0, 0.7);
+			color: white;
+			font-family: sans-serif;
+			font-size: 12px;
+			transition: background-color 0.3s;
+		}
+		.status-indicator.enabled {
+			background: rgba(0, 128, 0, 0.7);
+		}
+		.status-indicator.disabled {
+			background: rgba(128, 0, 0, 0.7);
+		}
+	</style>
+</head>
+<body>
+	<div id="overlay"></div>
+	<script src="./renderer/renderer.js"></script>
+</body>
+</html>

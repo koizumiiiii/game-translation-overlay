@@ -1,0 +1,15 @@
+{
+	"name": "game-translation-overlay",
+	"version": "0.1.0",
+	"main": "dist/main/main.js",
+	"scripts": {
+		"start": "tsc && copy index.html dist\\ && electron .",
+		"dev": "tsc && copy index.html dist\\ && set NODE_ENV=development && electron .",
+		"watch": "tsc -w"
+	},
+	"devDependencies": {
+		"electron": "latest",
+		"typescript": "latest",
+		"@types/node": "latest"
+	}
+}
